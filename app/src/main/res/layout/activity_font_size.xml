@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_font_size">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:id="@+id/txt_font"
+        android:text="@string/font_size"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:id="@+id/layout1"
+        android:padding="15dp"
+        android:layout_below="@+id/txt_font">
+
+    <RadioGroup
+        android:id="@+id/btngrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <RadioButton
+            android:id="@+id/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/small"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/medium"
+            />
+        <RadioButton
+            android:id="@+id/big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/big"
+            />
+        <RadioButton
+            android:id="@+id/bigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/bigger"
+            />
+
+    </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/layout1"
+        android:gravity="center_horizontal"
+        android:id="@+id/test_txt"
+        android:text="@string/test_text"
+       />
+
+</RelativeLayout>

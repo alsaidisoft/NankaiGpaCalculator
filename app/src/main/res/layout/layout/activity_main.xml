@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".MainActivity">
+
+   <androidx.gridlayout.widget.GridLayout
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:rowCount="3"
+       app:columnCount="2"
+       android:layout_margin="2dp">
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card1"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:id="@+id/img1"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_centerInParent="true"
+                   android:src="@mipmap/ic_action_calculate" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/calculate"
+                   android:text="@string/calculate"
+                   android:layout_below="@+id/img1"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card2"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:id="@+id/img2"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_centerInParent="true"
+                   android:src="@mipmap/ic_action_developers" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/developers"
+                   android:text="@string/developers"
+                   android:layout_below="@+id/img2"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card3"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <ImageView
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:id="@+id/img3"
+                   android:src="@mipmap/ic_action_info"
+                   android:layout_centerInParent="true"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/about"
+                   android:text="@string/about"
+                   android:layout_below="@+id/img3"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card4"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <ImageView
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:id="@+id/img4"
+                   android:src="@mipmap/ic_action_settings"
+                   android:layout_centerInParent="true"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/settings"
+                   android:text="@string/settings"
+                   android:layout_below="@+id/img4"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card5"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <ImageView
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:id="@+id/img5"
+                   android:src="@mipmap/ic_action_star_half"
+                   android:layout_centerInParent="true"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/rate_us"
+                   android:text="@string/rate_us"
+                   android:layout_below="@+id/img5"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card6"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_rowWeight="1"
+           app:layout_columnWeight="1"
+           android:layout_margin="5dp"
+           app:cardCornerRadius="15dp"
+           app:cardElevation="8dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <ImageView
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:id="@+id/img6"
+                   android:src="@mipmap/ic_action_logout"
+                   android:layout_centerInParent="true"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:id="@+id/log_out"
+                   android:text="@string/log_out"
+                   android:layout_below="@+id/img6"
+                   android:layout_centerHorizontal="true"/>
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+
+
+   </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

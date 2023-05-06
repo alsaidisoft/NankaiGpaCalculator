@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_font_size">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:id="@+id/txt_style"
+        android:text="@string/calculate_style"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:id="@+id/layout1"
+        android:padding="15dp"
+        android:layout_below="@+id/txt_style">
+
+    <RadioGroup
+        android:id="@+id/btngrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <RadioButton
+            android:id="@+id/us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/us"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:checked="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textAlignment="textStart"
+            android:text="@string/us_way"
+            android:id="@+id/us_gpa"/>
+
+        <RadioButton
+            android:id="@+id/global"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/global"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="20dp"
+            android:text="@string/global_way"
+            android:id="@+id/global_gpa"/>
+
+
+    </RadioGroup>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+</ScrollView>
