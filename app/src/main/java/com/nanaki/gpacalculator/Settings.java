@@ -33,12 +33,13 @@ public class Settings extends AppCompatActivity {
 
         String[] settings = {getResources().getString(R.string.version)
         ,getResources().getString(R.string.font_size),getResources().getString(R.string.language),
-                getResources().getString(R.string.dark_mode),getResources().getString(R.string.calculate_style)
+                getResources().getString(R.string.dark_mode),getResources().getString(R.string.calculate_style),getResources().getString(R.string.privacy_policy)
         ,getResources().getString(R.string.send_to),getResources().getString(R.string.contact_us)};
 
         //int[] drawableIds = {R.mipmap.v, R.mipmap.ic_action_developers};
 
-        int[] mimpamIds = { R.mipmap.ic_version,R.mipmap.ic_font,R.mipmap.ic_language,R.mipmap.ic_style,R.mipmap.ic_calculate_style
+        int[] mimpamIds = { R.mipmap.ic_version,R.mipmap.ic_font,R.mipmap.ic_language,R.mipmap.ic_style,
+                R.mipmap.ic_calculate_style,R.mipmap.ic_action_privacy_policy
         ,R.mipmap.ic_share,R.mipmap.ic_contact_us};
 
         CustomAdapter adapter = new CustomAdapter(this,  settings, mimpamIds);
@@ -81,24 +82,31 @@ public class Settings extends AppCompatActivity {
                        openCalculateStyle.setFlags(FLAG_ACTIVITY_NEW_TASK);
                        startActivity(openCalculateStyle);
                        break;
+
                    case 5:
+                       Intent privacy_policy = new Intent(Settings.this,PrivacyPolicy.class);
+                       privacy_policy.setFlags(FLAG_ACTIVITY_NEW_TASK);
+                       startActivity(privacy_policy);
+                       break;
+
+                   case 6:
 
 
                        Intent share = new Intent(Intent.ACTION_SEND);
                        String msg = "download our app GPA calculator of Nankai university for international students from google play store via: "+
                                "\n" +
-                               "https://play.google.com/store/apps/details?id="+PACKAGE_NAME;
+                               "https://play.google.com/store/apps/details?id="+"com.nanaki.gpacalculator";
                        share.putExtra(Intent.EXTRA_TEXT, msg);
                        share.setType("text/plain");
                        startActivity(Intent.createChooser(share, getResources().getText(R.string.send_to)));
 
                        break;
 
-                   case 6:
+                   case 7:
                        try {
 
                            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                                   "mailto", "said90.ss@gmail.com", null));
+                                   "mailto", "saeed.alsaidi.developer@gmail.com", null));
                            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject: ");
                            emailIntent.putExtra(Intent.EXTRA_TEXT, "Body: ");
                            startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.contact_us)));

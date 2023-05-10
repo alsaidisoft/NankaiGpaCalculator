@@ -28,7 +28,7 @@
     <string name="some_thing_missing">少了點什麼！</string>
     <string name="choose_num_of_course">選擇課程數量：</string>
     <string name="num_course">您選擇的課程數量是</string>
-    <string name="app_dev">這個應用程式由南開大學的國際學生開發: \n- SAID Al SAIDI \n- MOHAMMED AL MAHI \n- AMMAR KHALID \n- HIDER \n- MOHAMMED</string>
+    <string name="app_dev">這個應用程式由南開大學的國際學生開發: \n- SAID Al SAIDI \n- MOHAMMED AL MAHI \n- AMMAR KHALID \n- HIDER HUSAM AHMED \n- MOHAMMED SAAD ALI</string>
     <string name="aboutTxt">這是南開大學國際學生的GPA計算機，幫助他們計算GPA，由學生設計，作為作業的一部分。這個程序根據以下公式計算GPA:\n
         - A (100 - 85)\n
         - B (75 - 84)\n
@@ -62,4 +62,14 @@ C = 2.8\n
 D =2.4\n
 E =2.0\n
 </string>
+    <string name="privacy_policy">隱私政策</string>
+    <string name="privacy_content">此應用程序旨在通過為南開大學的學生提供具有以下簡單功能的簡單應用程序來幫助他們計算 GPA：
+     - 計算樣式。
+     - 支持美國和全球 GPA 計算方式。
+     - 支持英文和中文。
+     由南開大學軟件工程系學生設計的應用。
+     該應用程序不會收集任何個人信息或與第三方共享。
+     該應用不需要任何權限即可訪問相機、真實位置 GPS、存儲數據或更改手機設置。
+     Alsaidisoft 設計的用於幫助學生計算 GPA 的應用程序。
+     您可以通過電子郵件聯繫我們：saeed.alsaidi.developer@gmail.com</string>
 </resources>

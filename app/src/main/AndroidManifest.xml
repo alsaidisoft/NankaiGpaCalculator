@@ -71,6 +71,12 @@
             android:icon="@mipmap/ic_launcher"
             android:supportsRtl="true"
             android:label="@string/app_name" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:screenOrientation="portrait"
+            android:icon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

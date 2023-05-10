@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=" + PACKAGE_NAME));
+                intent.setData(Uri.parse("market://details?id=" + "com.nanaki.gpacalculator"));
                 startActivity(intent);
             }
         });
