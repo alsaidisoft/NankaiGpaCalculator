@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
+
         c1=(CardView) findViewById(R.id.card1);
         c2=(CardView) findViewById(R.id.card2);
         c3=(CardView) findViewById(R.id.card3);
