@@ -33,7 +33,10 @@
         - A (100 - 85)\n
         - B (75 - 84)\n
         - C ( 74 -60)\n
-        - D ( below 60)\nThe app still in development process, there will be updates from time to time.
+        - D ( below 60)\n
+        There is another way to calculate GPA, you can choose it via the settings.\n
+        The app still in development process, there will be updates from time to time.
+
     </string>
     <string name="small">Small</string>
     <string name="medium">Medium</string>
