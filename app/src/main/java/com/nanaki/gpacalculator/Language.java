@@ -31,7 +31,7 @@ public class Language extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
 
-        ActionBar actionBar = getActionBar();
+        //ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //initializing variables
         radioGroup = (RadioGroup) findViewById(R.id.btngrp);
