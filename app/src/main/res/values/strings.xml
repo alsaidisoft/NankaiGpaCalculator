@@ -28,8 +28,8 @@
     <string name="some_thing_missing">Something missing!</string>
     <string name="choose_num_of_course">Choose number of course: </string>
     <string name="num_course">Number of courses you have chosen is </string>
-    <string name="app_dev">This app developed by international Nankai University students: \n- SAID Al SAIDI \n- MOHAMMED AL MAHI \n- AMMAR KHALID \n- HIDER HUSAM AHMED \n- MOHAMMED SAAD ALI</string>
-    <string name="aboutTxt">This is Nankai university GPA calculator for international students to help them calculate their GPA, designed by students as part of their assignment. This app calculate the GPA according to below formula:\n
+    <string name="app_dev">This app developed by SAID Al SAIDI </string>
+    <string name="aboutTxt">This is Nankai university GPA calculator for international students to help them calculate their GPA, designed by student as part of his assignment. This app calculate the GPA according to below formula:\n
         - A (100 - 85)\n
         - B (75 - 84)\n
         - C ( 74 -60)\n
