@@ -28,12 +28,10 @@
     <string name="some_thing_missing">少了點什麼！</string>
     <string name="choose_num_of_course">選擇課程數量：</string>
     <string name="num_course">您選擇的課程數量是</string>
-    <string name="app_dev">這個應用程式由南開大學的國際學生開發: \n- SAID Al SAIDI</string>
-    <string name="aboutTxt">這是南開大學國際學生的GPA計算機，幫助他們計算GPA，由學生設計，作為作業的一部分。這個程序根據以下公式計算GPA:\n
-        - A (100 - 85)\n
-        - B (75 - 84)\n
-        - C ( 74 -60)\n
-        - D ( below 60)\n該應用程式仍在開發過程中，會不時更新。
+    <string name="app_dev">這個應用程式由南開大學的國際學生開發: \n- AlsaidiSoft</string>
+    <string name="aboutTxt">这是一款为南开大学留学生提供的GPA计算器，帮助他们计算GPA。 该程序根据以下公式计算 GPA:\n
+          - 美国公式\n
+          - 全局公式\n
     </string>
     <string name="small">小</string>
     <string name="medium">中等</string>
@@ -45,23 +43,23 @@
     <string name="us">美國</string>
     <string name="global">全球</string>
     <string name="us_way">A = 4\n
-A- = 3.7\n
-B+ = 3.3\n
-B = 3\n
-B- = 2.7\n
-C+ = 2.3\n
-C = 2.0\n
-C- = 1.7\n
-D+ = 1.3\n
-D = 1\n
-D- = .7\n
-F = 0</string>
+        A- = 3.7\n
+        B+ = 3.3\n
+        B = 3\n
+        B- = 2.7\n
+        C+ = 2.3\n
+        C = 2.0\n
+        C- = 1.7\n
+        D+ = 1.3\n
+        D = 1\n
+        D- = .7\n
+        F = 0</string>
     <string name="global_way">A = 4\n
-B = 3.2\n
-C = 2.8\n
-D =2.4\n
-E =2.0\n
-</string>
+        B = 3.2\n
+        C = 2.8\n
+        D =2.4\n
+        E =2.0\n
+        </string>
     <string name="privacy_policy">隱私政策</string>
     <string name="privacy_content">此應用程序旨在通過為南開大學的學生提供具有以下簡單功能的簡單應用程序來幫助他們計算 GPA：
      - 計算樣式。
