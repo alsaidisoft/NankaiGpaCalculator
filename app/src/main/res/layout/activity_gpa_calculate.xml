@@ -7,12 +7,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/mainRelativeLayout"
         android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl1"
+            android:gravity="right"
             android:layout_centerHorizontal="true">
 
             <EditText
@@ -21,8 +23,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="2dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
-                android:maxLength="3"
+                android:inputType="number|numberDecimal"
                 android:textAlignment="center" />
             <EditText
                 android:layout_width="200dp"
@@ -39,13 +40,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/rl2"
             android:layout_below="@+id/rl1"
+            android:gravity="right"
             android:layout_centerHorizontal="true">
 
             <EditText
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark2"/>
@@ -64,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl3"
+            android:gravity="right"
             android:layout_below="@+id/rl2"
             android:layout_centerHorizontal="true">
 
@@ -71,7 +74,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark3"/>
@@ -89,6 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl4"
+            android:gravity="right"
             android:layout_below="@+id/rl3"
             android:layout_centerHorizontal="true">
 
@@ -96,7 +100,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark4"/>
@@ -114,6 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl5"
+            android:gravity="right"
             android:layout_below="@+id/rl4"
             android:layout_centerHorizontal="true">
 
@@ -121,7 +126,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark5"/>
@@ -139,6 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl6"
+            android:gravity="right"
             android:layout_below="@+id/rl5"
             android:layout_centerHorizontal="true">
 
@@ -146,7 +152,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark6"/>
@@ -165,6 +171,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl7"
+            android:gravity="right"
             android:layout_below="@+id/rl6"
             android:layout_centerHorizontal="true">
 
@@ -172,7 +179,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark7"/>
@@ -190,6 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl8"
+            android:gravity="right"
             android:layout_below="@+id/rl7"
             android:layout_centerHorizontal="true">
 
@@ -197,7 +205,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark8"/>
@@ -215,6 +223,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl9"
+            android:gravity="right"
             android:layout_below="@+id/rl8"
             android:layout_centerHorizontal="true">
 
@@ -222,7 +231,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark9"/>
@@ -240,6 +249,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl10"
+            android:gravity="right"
             android:layout_below="@+id/rl9"
             android:layout_centerHorizontal="true">
 
@@ -247,7 +257,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:layout_margin="2dp"
                 android:textAlignment="center"
                 android:id="@+id/mark10"/>

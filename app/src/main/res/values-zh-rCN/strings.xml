@@ -28,6 +28,7 @@
     <string name="some_thing_missing">少了點什麼！</string>
     <string name="choose_num_of_course">選擇課程數量：</string>
     <string name="num_course">您選擇的課程數量是</string>
+    <string name="gpa_bigger_than_foure">您输入的 Gpa 大于 4</string>
     <string name="app_dev">這個應用程式由南開大學的國際學生開發: \n- AlsaidiSoft</string>
     <string name="aboutTxt">这是一款为南开大学留学生提供的GPA计算器，帮助他们计算GPA。 该程序根据以下公式计算 GPA:\n
           - 美国公式\n
@@ -40,6 +41,7 @@
     <string name="test_text">測試文本</string>
     <string name="english">English</string>
     <string name="chinese">中文</string>
+    <string name="arabic">العربية</string>
     <string name="us">美國</string>
     <string name="global">全球</string>
     <string name="us_way">A = 4\n
@@ -64,7 +66,7 @@
     <string name="privacy_content">此應用程序旨在通過為南開大學的學生提供具有以下簡單功能的簡單應用程序來幫助他們計算 GPA：
      - 計算樣式。
      - 支持美國和全球 GPA 計算方式。
-     - 支持英文和中文。
+     - 支持阿拉伯语、英语和中文。
      由南開大學軟件工程系學生設計的應用。
      該應用程序不會收集任何個人信息或與第三方共享。
      該應用不需要任何權限即可訪問相機、真實位置 GPS、存儲數據或更改手機設置。

@@ -7,10 +7,13 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,15 +27,26 @@ public class CalculateStyle extends AppCompatActivity {
     public RadioGroup radioGroup;
     public static final String Calculate_style = "Calculate_style";
    String cal;
-
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
     RadioButton r1,r2;
+    RelativeLayout layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculate_style);
+        setTitle(R.string.calculate_style);
 
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        layout = (RelativeLayout) findViewById(R.id.relative_calculate_style);
+        if(lang.equals("العربية")) {
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            layout.setGravity(Gravity.LEFT);
+        }
         //initializing variables
         radioGroup = (RadioGroup) findViewById(R.id.btngrp);
 

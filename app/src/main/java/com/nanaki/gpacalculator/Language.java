@@ -7,10 +7,13 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,21 +27,32 @@ public class Language extends AppCompatActivity {
     public RadioGroup radioGroup;
     public static final String PREFS_NAME = "MY_LANGUAGE";
    String lang;
+    RelativeLayout layout;
 
-    RadioButton r1,r2;
+    RadioButton r1,r2,r3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
-
+        setTitle(R.string.language);
         //ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        layout = (RelativeLayout) findViewById(R.id.relative_language);
+        if(lang.equals("العربية")) {
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            layout.setGravity(Gravity.LEFT);
+
+        }
         //initializing variables
         radioGroup = (RadioGroup) findViewById(R.id.btngrp);
 
 
-          r1 = (RadioButton) findViewById(R.id.english);
-          r2 = (RadioButton) findViewById(R.id.chinese);
+            r1 = (RadioButton) findViewById(R.id.english);
+            r2 = (RadioButton) findViewById(R.id.chinese);
+            r3 = (RadioButton) findViewById(R.id.arabic);
 
 
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -51,8 +65,9 @@ public class Language extends AppCompatActivity {
                 break;
             case "中文":
                 r2.setChecked(true);
-
-
+                break;
+            case "العربية":
+                r3.setChecked(true);
                 break;
 
             default:
@@ -90,6 +105,16 @@ public class Language extends AppCompatActivity {
                         Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
                         intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent1);
+                        finish();
+                        break;
+                    case "العربية":
+
+                        setLocale("ar");
+                        editor.putString("lang", "العربية");
+                        editor.apply();
+                        Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
+                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent2);
                         finish();
                         break;
 

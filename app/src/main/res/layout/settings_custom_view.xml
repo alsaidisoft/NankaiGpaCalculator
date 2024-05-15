@@ -13,27 +13,28 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/item_sett_lyt"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr">
 
 
 
         <ImageView
             android:id="@+id/settings_img"
             android:layout_width="30dp"
-            android:layout_gravity="left"
             android:layout_height="30dp"
             android:layout_margin="2dp"
             android:backgroundTint="@color/image_tint"
-            android:src="@drawable/ic_launcher" />
+            android:src="@mipmap/ic_launcher" />
         <TextView
             android:id="@+id/settings_title"
             android:layout_width="match_parent"
             android:padding="2dp"
-            android:layout_toRightOf="@+id/settings_img"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="@string/app_name"
             android:gravity="left"
+            android:layout_marginLeft="150px"
+            android:layout_marginRight="150px"
             android:textSize="18sp"
             android:textAlignment="gravity"
             />

@@ -28,6 +28,7 @@
     <string name="some_thing_missing">Something missing!</string>
     <string name="choose_num_of_course">Choose number of course: </string>
     <string name="num_course">Number of courses you have chosen is </string>
+    <string name="gpa_bigger_than_foure">You entered Gpa bigger than 4</string>
     <string name="app_dev">AlsaidiSoft </string>
     <string name="aboutTxt">This is Nankai university GPA calculator for international students to help them calculate their GPA. This app calculate the GPA according to below formula:\n
         - US style\n
@@ -41,6 +42,7 @@
     <string name="test_text">Test text</string>
     <string name="english">English</string>
     <string name="chinese">中文</string>
+    <string name="arabic">العربية</string>
     <string name="us">US</string>
     <string name="global">Global</string>
     <string name="us_way">A = 4\n
@@ -65,10 +67,12 @@
     <string name="privacy_content">This application is designed to help students in Nankai university to calculate their GPA by providing for them simple application with easy features such as:\n
     - Calculate style.\n
     - Supports US and Global calculation style of GPA.\n
-    - Supports English and Chinese language.\n
+    - Supports Arabic, English and Chinese languages.\n
     The app designed by software engineering students in the Nankai University.\n
     The app does not collect any personal information or share them with third party.\n
     The app does not required any permission to access camera, real location GPS, storage data or change settings in the phone.\n
     The app designed by Alsaidisoft to help students calculate their GPA.\n
     You can contact us via email: saeed.alsaidi.developer@gmail.com</string>
+
+
 </resources>

@@ -5,6 +5,7 @@ import static android.provider.ContactsContract.Directory.PACKAGE_NAME;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,14 +22,21 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Settings extends AppCompatActivity {
 
     ListView listView;
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        setTitle(R.string.settings);
 
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        if(lang.equals("العربية"))
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         listView = (ListView) findViewById(R.id.listSettings);
 
         String[] settings = {getResources().getString(R.string.version)

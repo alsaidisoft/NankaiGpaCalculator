@@ -7,24 +7,38 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     CardView c1,c2,c3,c4,c5,c6;
     TextView gpa,developers,about,settings,rate_us,log_out;
+    ImageView gpa2, developers2, about2, settings2,rate_us2,log_out2;
     public static final String fontSize = "MY_FONTSIZE";
-
+    public static final String Theme = "Theme";
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.app_name);
+
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        if(lang.equals("العربية"))
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 
         gpa =(TextView)findViewById(R.id.calculate);
         developers = (TextView)findViewById(R.id.developers);
@@ -32,8 +46,25 @@ public class MainActivity extends AppCompatActivity {
         settings = (TextView)findViewById(R.id.settings);
         rate_us = (TextView)findViewById(R.id.rate_us);
         log_out = (TextView)findViewById(R.id.log_out);
-        SharedPreferences prefs = getSharedPreferences(fontSize, MODE_PRIVATE);
-        String font = prefs.getString("fontSize", "no");
+        gpa2 = (ImageView) findViewById(R.id.img1);
+        developers2 = (ImageView) findViewById(R.id.img2);
+        about2 = (ImageView) findViewById(R.id.img3);
+        settings2 = (ImageView) findViewById(R.id.img4);
+        rate_us2 = (ImageView) findViewById(R.id.img5);
+        log_out2 = (ImageView) findViewById(R.id.img6);
+        SharedPreferences prefs1 = getSharedPreferences(Theme, MODE_PRIVATE);
+        String check = prefs1.getString("Theme", "no");
+        if(check.equals("dark")){
+            setImageColor(gpa2);
+            setImageColor(developers2);
+            setImageColor(settings2);
+            setImageColor(rate_us2);
+            setImageColor(about2);
+            setImageColor(log_out2);
+        }
+
+        SharedPreferences prefs2 = getSharedPreferences(fontSize, MODE_PRIVATE);
+        String font = prefs2.getString("fontSize", "no");
         switch (font){
             case "small":
                 gpa.setTextSize(16);
@@ -114,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
                 alertDialogBuilder.setTitle(R.string.developers);
                 // set dialog message
                 int mImage = R.mipmap.ic_action_developers;
+                if(check.equals("dark")) {
+                    mImage = R.mipmap.ic_developers;
+                }
                 alertDialogBuilder.setIcon(mImage);
                 alertDialogBuilder.setMessage(getResources().getString(R.string.app_dev))
                 .setCancelable(false)
@@ -131,7 +165,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // show it
                 alertDialog.show();
-
+                if(check.equals("dark")){
+                    alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
+                    alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
+                }
 
 
             }
@@ -165,9 +202,15 @@ public class MainActivity extends AppCompatActivity {
         c6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.this.finish();
-                System.exit(0);
+                //MainActivity.this.finish();
+                finish();
+                moveTaskToBack(true);
             }
         });
+
+    }
+
+    public void setImageColor(ImageView myImg){
+        myImg.setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.image_tint), android.graphics.PorterDuff.Mode.SRC_IN);
     }
 }

@@ -1,11 +1,14 @@
 package com.nanaki.gpacalculator;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,8 +22,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.content.ContextCompat;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class Gpa extends AppCompatActivity {
 
@@ -30,13 +37,24 @@ public class Gpa extends AppCompatActivity {
             credit6,mark7,credit7,mark8,credit8,mark9,credit9,mark10,credit10;
     RelativeLayout r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
     Button btn;
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
+    String check;
+    public static final String Theme = "Theme";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpa_calculate);
-
+        setTitle(R.string.calculate);
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        if(lang.equals("العربية"))
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        SharedPreferences prefs1 = getSharedPreferences(Theme, MODE_PRIVATE);
+        check = prefs1.getString("Theme", "no");
 
         SharedPreferences prefs = getSharedPreferences(Calculate_style, MODE_PRIVATE);
         cal = prefs.getString("calc_style", "no");
@@ -67,26 +85,36 @@ public class Gpa extends AppCompatActivity {
         mark10 = (EditText) findViewById(R.id.mark10);
         credit10 = (EditText) findViewById(R.id.crid10);
 
-        mark1.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit1.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark2.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit2.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark3.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit3.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark4.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit4.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark5.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit5.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark6.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit6.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark7.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit7.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark8.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit8.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark9.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit9.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
-        mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
-        credit10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "4")});
+        mark1.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark1.addTextChangedListener(new DecimalFilter(mark1, activity));
+        credit1.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark2.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark2.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit2.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark3.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark3.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit3.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark4.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark4.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit4.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark5.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark5.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit5.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark6.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark6.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit6.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark7.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark7.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit7.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark8.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark8.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit8.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark9.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark9.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit9.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark10.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
 
         r1 = (RelativeLayout)findViewById(R.id.rl1);
         r2 = (RelativeLayout)findViewById(R.id.rl2);
@@ -518,10 +546,15 @@ public class Gpa extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0.00");
         AlertDialog.Builder builder = new AlertDialog.Builder(Gpa.this);
         int mImage = R.mipmap.ic_action_calculate;
+        if(check.equals("dark")) {
+            mImage = R.mipmap.ic_calculate_style;
+        }
         builder.setIcon(mImage);
         builder.setTitle(R.string.result);
         builder.setMessage(getResources().getString(R.string.your_semester_gpa) +":\n"+df.format(result));
         builder.setCancelable(false);
+
+
         builder.setPositiveButton(R.string.calculate_cumulative_gpa, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -534,10 +567,17 @@ public class Gpa extends AppCompatActivity {
                 View dialoglayout = inflater.inflate(R.layout.activity_cumulative_gpa, frameView);
                 alertDialog.setCancelable(false);
                 Button calc = (Button) dialoglayout.findViewById(R.id.calc_cgpa_btn);
+                ImageView icon_gpa = (ImageView) dialoglayout.findViewById(R.id.icon_gpa);
                 ImageView exit_btn = (ImageView) dialoglayout.findViewById(R.id.exit);
+                TextView calc_gpa = (TextView)dialoglayout.findViewById(R.id.calc_gpa);
                 TextView txt = (TextView)dialoglayout.findViewById(R.id.result1);
                 EditText hourse = (EditText) dialoglayout.findViewById(R.id.total_horse);
                 EditText cgpa = (EditText) dialoglayout.findViewById(R.id.total_gpa);
+                if(check.equals("dark")){
+                    txt.setTextColor(Color.WHITE);
+                    calc_gpa.setTextColor(Color.WHITE);
+                    icon_gpa.setImageDrawable(getResources().getDrawable(R.mipmap.ic_calculate_style, getApplicationContext().getTheme()));
+                }
                 exit_btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -548,15 +588,19 @@ public class Gpa extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if(!isEmpty(hourse) && !isEmpty(cgpa)) {
+
                             double h = Double.parseDouble(hourse.getText().toString());
                             double cg = Double.parseDouble(cgpa.getText().toString());
-                            System.out.println(result+"\t"+credits+"\t"+cg+"\t"+h);
-                            double total = (result*credits)+(cg*h);
-                            total = total/(credits+h);
-                            System.out.println(total);
-                            txt.setText(getResources().getString(R.string.your_cumulative_gpa) + "="+df.format(total));
-                            //Toast.makeText(getApplicationContext(), getResources().getString(R.string.your_cumulative_gpa) + "="+total, Toast.LENGTH_LONG).show();
-                            //alertDialog.cancel();
+                            //if(cg > 4) {
+                                System.out.println(result + "\t" + credits + "\t" + cg + "\t" + h);
+                                double total = (result * credits) + (cg * h);
+                                total = total / (credits + h);
+                                System.out.println(total);
+                                txt.setText(getResources().getString(R.string.your_cumulative_gpa) + "=" + df.format(total));
+                            //}else {
+                           //     Toast.makeText(getApplicationContext(), getResources().getString(R.string.gpa_bigger_than_foure), Toast.LENGTH_LONG).show();
+                            //}
+                                //alertDialog.cancel();
                         }
                         else{
                             Toast.makeText(getApplicationContext(), getResources().getString(R.string.some_thing_missing), Toast.LENGTH_LONG).show();
@@ -580,6 +624,10 @@ public class Gpa extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+        if(check.equals("dark")){
+            alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
+            alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
+        }
     }
 
     private boolean isEmpty(EditText etText) {
@@ -611,5 +659,9 @@ public class Gpa extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
+    }
+
+    public void setImageColor(ImageView myImg){
+        myImg.setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.image_tint), android.graphics.PorterDuff.Mode.SRC_IN);
     }
 }

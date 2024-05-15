@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -17,14 +18,20 @@ public class ThemeStyle extends AppCompatActivity {
     Switch aSwitch;
     TextView txt;
     public static final String Theme = "Theme";
-
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theme);
+        setTitle(R.string.dark_mode);
 
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        if(lang.equals("العربية"))
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         aSwitch =(Switch)this.findViewById(R.id.switch1);
         txt = (TextView)this.findViewById(R.id.switchtext);
         SharedPreferences prefs = getSharedPreferences(Theme, MODE_PRIVATE);

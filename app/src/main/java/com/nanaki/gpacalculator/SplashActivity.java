@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,17 +34,16 @@ public class SplashActivity extends AppCompatActivity {
         switch (lang) {
             case "English":
                 setLocale("en");
-
                 break;
             case "中文":
                 setLocale("zh");
-
-
                 break;
-
+            case "العربية":
+                setLocale("ar");
+                getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+                break;
             default:
                 setLocale("en");
-
                 break;
         }
         SharedPreferences prefs = getSharedPreferences(Theme, MODE_PRIVATE);

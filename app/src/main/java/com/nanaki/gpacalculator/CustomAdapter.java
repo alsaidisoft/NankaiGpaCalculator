@@ -1,7 +1,10 @@
 package com.nanaki.gpacalculator;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +26,9 @@ public class CustomAdapter extends BaseAdapter {
     private Context mContext;
     private static LayoutInflater inflater = null;
     public static final String fontSize = "MY_FONTSIZE";
+
+    public static final String PREFS_NAME = "MY_LANGUAGE";
+    String lang;
 
     public CustomAdapter(Context context, String[] text1,int[] imageIds) {
         mContext = context;
@@ -56,11 +62,19 @@ public class CustomAdapter extends BaseAdapter {
         ImageView i1;
         i1 = (ImageView) row.findViewById(R.id.settings_img);
         title = (TextView) row.findViewById(R.id.settings_title);
+        RelativeLayout layout;
+        layout = (RelativeLayout) row.findViewById(R.id.item_sett_lyt);
 
+        SharedPreferences l = mContext.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        lang = l.getString("lang", "no");
+        if(lang.equals("العربية")){
+            layout.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            title.setGravity(Gravity.RIGHT);
+        }
         title.setText(Title[position]);
         i1.setImageResource(imge[position]);
 
-        SharedPreferences prefs = mContext.getSharedPreferences(fontSize, mContext.MODE_PRIVATE);
+        SharedPreferences prefs = mContext.getSharedPreferences(fontSize, MODE_PRIVATE);
         String font = prefs.getString("fontSize", "no");
         switch (font){
             case "small":

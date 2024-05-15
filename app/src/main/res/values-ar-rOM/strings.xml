@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">حاسبة المعدل التراكمي</string>
+    <string name="about">عن التطبيق</string>
+    <string name="version">النسخة </string>
+    <string name="contact_us">تواصل معنا </string>
+    <string name="language">اللغة </string>
+    <string name="calculate_style">طريقة الحساب </string>
+    <string name="font_size">حجم الخط</string>
+    <string name="dark_mode">نمط التصميم</string>
+    <string name="developers">المطور</string>
+    <string name="calculate">حساب المعدل</string>
+    <string name="settings">الإعدادات</string>
+    <string name="log_out">خروج</string>
+    <string name="rate_us">قيمنا</string>
+    <string name="ok">حسنا</string>
+    <string name="send_to">مشاركة مع</string>
+    <string name="enter_credit">عدد الساعات</string>
+    <string name="enter_mark">الدرجة</string>
+    <string name="result">النتيجة:</string>
+    <string name="enterTotal_Hourse_Before_This_semester">مجموع الساعات لهذا الفصل</string>
+    <string name="gpa_before_this_semester">المعدل التراكمي قبل هذا الفصل</string>
+    <string name="some_thing_wrong">هناك خطأ ما!</string>
+    <string name="your_semester_gpa">معدلك التراكمي الفصلي </string>
+    <string name="change_to_dark">تغيير للوضع الليلي</string>
+    <string name="change_to_light">تغيير للوضع النهاري</string>
+    <string name="calculate_cumulative_gpa">حساب المعدل التراكمي</string>
+    <string name="your_cumulative_gpa">معدلك التراكمي </string>
+    <string name="some_thing_missing">هناك شيء مفقود!</string>
+    <string name="choose_num_of_course">اختر عدد المواد: </string>
+    <string name="num_course">عدد المواد التي اخترتها </string>
+    <string name="gpa_bigger_than_foure">أدخلت معدلا أعلى من 4</string>
+    <string name="app_dev">AlsaidiSoft </string>
+    <string name="aboutTxt">
+        هذه حاسبة المعدل التراكمي مصممة كمشروع فصلي لأحد المواد لطلبة جامعة نانكاي بجمهورية الصين الشعبية، هذه الحاسبة تقوم بحساب المعدل وفقا للنظامين:\n
+        - الأمريكي\n
+        - العالمي\n
+        بإمكانك اختيار النمط الخاص بك عن طريق الإعدادات.
+    </string>
+    <string name="small">صغير</string>
+    <string name="medium">متوسط</string>
+    <string name="big">كبير</string>
+    <string name="bigger">كبير جدا</string>
+    <string name="test_text">جملة للإختبار</string>
+    <string name="english">English</string>
+    <string name="chinese">中文</string>
+    <string name="arabic">العربية</string>
+    <string name="us">الأمريكي</string>
+    <string name="global">العالمي</string>
+    <string name="us_way">A = 4\n
+        A- = 3.7\n
+        B+ = 3.3\n
+        B = 3\n
+        B- = 2.7\n
+        C+ = 2.3\n
+        C = 2.0\n
+        C- = 1.7\n
+        D+ = 1.3\n
+        D = 1\n
+        D- = .7\n
+        F = 0</string>
+    <string name="global_way">A = 4\n
+        B = 3.2\n
+        C = 2.8\n
+        D =2.4\n
+        E =2.0\n
+        </string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="privacy_content">
+    هذا التطبيق مصمم لمساعدة الطلبة في جامعة نانكاي لحساب معدلهم التراكمي عن طريق توفير تطبيق سهل لتسهيل عملية الحساب، ويحتوي هذا التطبيق على العديد من المزايا مثل:
+       \n - طريقة الإحتساب.
+       \n - دعم اللغة العربية والصينية والإنجليزية.
+       \n التطبيق تم تصميمه بواسطة طلبة كلية هندسة البرمجيات بجامعة نانكاي.
+       \n التطبيق لا يقوم بجمع أية معلومات خاصة بالمستخدمين ولا يرسلها لطرف ثالث.
+       \n التطبيق لا يتطلب أي إذن لإستخدام كامرا الهاتف أو الوصول للصور أو جهات الاتصال أو الموقع.
+       \n التطبيق تم تطويره وتصميمه بواسطة المطور Alsaidisoft.
+       \n بإمكانك التواصل مع المطور من خلال الإيميل التالي:
+        saeed.alsaidi.developer@gmail.com
+
+    </string>
+</resources>

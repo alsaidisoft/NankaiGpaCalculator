@@ -3,25 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relative_font_size">
+    >
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative_calculate_style"
     android:padding="4dp">
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:gravity="left"
         android:textSize="16sp"
         android:id="@+id/txt_style"
         android:text="@string/calculate_style"
         />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
         android:id="@+id/layout1"
         android:padding="15dp"
         android:layout_below="@+id/txt_style">
@@ -30,7 +29,7 @@
         android:id="@+id/btngrp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layoutDirection="ltr">
+        >
 
         <RadioButton
             android:id="@+id/us"
