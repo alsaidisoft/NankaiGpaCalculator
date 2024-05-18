@@ -3,6 +3,8 @@ package com.nanaki.gpacalculator;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.UiModeManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -40,6 +42,8 @@ public class Gpa extends AppCompatActivity {
     public static final String PREFS_NAME = "MY_LANGUAGE";
     String lang;
     String check;
+    UiModeManager uiModeManager;
+    int mode;
     public static final String Theme = "Theme";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,8 @@ public class Gpa extends AppCompatActivity {
         setTitle(R.string.calculate);
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        uiModeManager = (UiModeManager) getApplicationContext().getSystemService(Context.UI_MODE_SERVICE);
+        mode = uiModeManager.getNightMode();
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         lang = l.getString("lang", "no");
         if(lang.equals("العربية"))
@@ -546,7 +552,7 @@ public class Gpa extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0.00");
         AlertDialog.Builder builder = new AlertDialog.Builder(Gpa.this);
         int mImage = R.mipmap.ic_action_calculate;
-        if(check.equals("dark")) {
+        if(mode == UiModeManager.MODE_NIGHT_YES) {
             mImage = R.mipmap.ic_calculate_style;
         }
         builder.setIcon(mImage);
@@ -573,7 +579,7 @@ public class Gpa extends AppCompatActivity {
                 TextView txt = (TextView)dialoglayout.findViewById(R.id.result1);
                 EditText hourse = (EditText) dialoglayout.findViewById(R.id.total_horse);
                 EditText cgpa = (EditText) dialoglayout.findViewById(R.id.total_gpa);
-                if(check.equals("dark")){
+                if(mode == UiModeManager.MODE_NIGHT_YES) {
                     txt.setTextColor(Color.WHITE);
                     calc_gpa.setTextColor(Color.WHITE);
                     icon_gpa.setImageDrawable(getResources().getDrawable(R.mipmap.ic_calculate_style, getApplicationContext().getTheme()));
@@ -624,7 +630,7 @@ public class Gpa extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-        if(check.equals("dark")){
+        if(mode == UiModeManager.MODE_NIGHT_YES) {
             alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
             alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
         }

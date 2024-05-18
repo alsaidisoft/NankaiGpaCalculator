@@ -17,7 +17,7 @@
     <string name="enter_credit">عدد الساعات</string>
     <string name="enter_mark">الدرجة</string>
     <string name="result">النتيجة:</string>
-    <string name="enterTotal_Hourse_Before_This_semester">مجموع الساعات لهذا الفصل</string>
+    <string name="enterTotal_Hourse_Before_This_semester">مجموع الساعات قبل هذا الفصل</string>
     <string name="gpa_before_this_semester">المعدل التراكمي قبل هذا الفصل</string>
     <string name="some_thing_wrong">هناك خطأ ما!</string>
     <string name="your_semester_gpa">معدلك التراكمي الفصلي </string>

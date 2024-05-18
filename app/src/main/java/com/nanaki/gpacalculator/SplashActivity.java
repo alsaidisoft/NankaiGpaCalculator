@@ -50,12 +50,12 @@ public class SplashActivity extends AppCompatActivity {
         String check = prefs.getString("Theme", "no");
 
 
-        if(check.equals("dark")){
+        /*if(check.equals("dark")){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
         else{
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
+        }*/
         try {
 
             new Handler().postDelayed(new Runnable() {

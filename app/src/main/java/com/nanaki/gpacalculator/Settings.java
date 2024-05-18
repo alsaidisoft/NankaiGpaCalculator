@@ -41,12 +41,12 @@ public class Settings extends AppCompatActivity {
 
         String[] settings = {getResources().getString(R.string.version)
         ,getResources().getString(R.string.font_size),getResources().getString(R.string.language),
-                getResources().getString(R.string.dark_mode),getResources().getString(R.string.calculate_style),getResources().getString(R.string.privacy_policy)
+                /*getResources().getString(R.string.dark_mode),*/getResources().getString(R.string.calculate_style),getResources().getString(R.string.privacy_policy)
         ,getResources().getString(R.string.send_to),getResources().getString(R.string.contact_us)};
 
         //int[] drawableIds = {R.mipmap.v, R.mipmap.ic_action_developers};
 
-        int[] mimpamIds = { R.mipmap.ic_version,R.mipmap.ic_font,R.mipmap.ic_language,R.mipmap.ic_style,
+        int[] mimpamIds = { R.mipmap.ic_version,R.mipmap.ic_font,R.mipmap.ic_language,/*R.mipmap.ic_style,*/
                 R.mipmap.ic_calculate_style,R.mipmap.ic_action_privacy_policy
         ,R.mipmap.ic_share,R.mipmap.ic_contact_us};
 
@@ -80,24 +80,24 @@ public class Settings extends AppCompatActivity {
                        lang.setFlags(FLAG_ACTIVITY_NEW_TASK);
                        startActivity(lang);
                        break;
-                   case 3:
+                  /* case 3:
                        Intent openTheme = new Intent(Settings.this,ThemeStyle.class);
                        openTheme.setFlags(FLAG_ACTIVITY_NEW_TASK);
                        startActivity(openTheme);
-                       break;
-                   case 4:
+                       break;*/
+                   case 3:
                        Intent openCalculateStyle = new Intent(Settings.this,CalculateStyle.class);
                        openCalculateStyle.setFlags(FLAG_ACTIVITY_NEW_TASK);
                        startActivity(openCalculateStyle);
                        break;
 
-                   case 5:
+                   case 4:
                        Intent privacy_policy = new Intent(Settings.this,PrivacyPolicy.class);
                        privacy_policy.setFlags(FLAG_ACTIVITY_NEW_TASK);
                        startActivity(privacy_policy);
                        break;
 
-                   case 6:
+                   case 5:
 
 
                        Intent share = new Intent(Intent.ACTION_SEND);
@@ -110,7 +110,7 @@ public class Settings extends AppCompatActivity {
 
                        break;
 
-                   case 7:
+                   case 6:
                        try {
 
                            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(

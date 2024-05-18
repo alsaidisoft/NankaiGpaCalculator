@@ -96,6 +96,18 @@ public class CalculateStyle extends AppCompatActivity {
 
                         break;
 
+                    case "الأمريكي":
+
+                        editor.putString("calc_style", "US");
+                        editor.apply();
+
+                        break;
+                    case "العالمي":
+                        editor.putString("calc_style", "Global");
+                        editor.apply();
+
+                        break;
+
                     case "美國":
 
                         editor.putString("calc_style", "US");

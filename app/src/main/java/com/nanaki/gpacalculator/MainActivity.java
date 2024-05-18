@@ -4,6 +4,8 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.provider.ContactsContract.Directory.PACKAGE_NAME;
 
 import android.app.AlertDialog;
+import android.app.UiModeManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,11 +31,16 @@ public class MainActivity extends AppCompatActivity {
     public static final String Theme = "Theme";
     public static final String PREFS_NAME = "MY_LANGUAGE";
     String lang;
+    UiModeManager uiModeManager;
+    int mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.app_name);
+
+        uiModeManager = (UiModeManager) getApplicationContext().getSystemService(Context.UI_MODE_SERVICE);
+        mode = uiModeManager.getNightMode();
 
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         lang = l.getString("lang", "no");
@@ -54,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         log_out2 = (ImageView) findViewById(R.id.img6);
         SharedPreferences prefs1 = getSharedPreferences(Theme, MODE_PRIVATE);
         String check = prefs1.getString("Theme", "no");
-        if(check.equals("dark")){
+        if(mode == UiModeManager.MODE_NIGHT_YES) {
             setImageColor(gpa2);
             setImageColor(developers2);
             setImageColor(settings2);
@@ -145,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                 alertDialogBuilder.setTitle(R.string.developers);
                 // set dialog message
                 int mImage = R.mipmap.ic_action_developers;
-                if(check.equals("dark")) {
+                if(mode == UiModeManager.MODE_NIGHT_YES) {
                     mImage = R.mipmap.ic_developers;
                 }
                 alertDialogBuilder.setIcon(mImage);
@@ -165,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // show it
                 alertDialog.show();
-                if(check.equals("dark")){
+                if(mode == UiModeManager.MODE_NIGHT_YES) {
                     alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
                     alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
                 }
