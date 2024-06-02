@@ -89,7 +89,6 @@ public class Language extends AppCompatActivity {
                 switch (rb.getText().toString()) {
 
                     case "English":
-
                         setLocale("en");
                         editor.putString("lang", "English");
                         editor.apply();

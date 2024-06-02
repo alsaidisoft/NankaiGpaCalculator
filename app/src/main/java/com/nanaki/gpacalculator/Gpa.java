@@ -36,8 +36,9 @@ public class Gpa extends AppCompatActivity {
     public static final String Calculate_style = "Calculate_style";
     String cal;
     EditText mark1,credit1,mark2,credit2,mark3,credit3,mark4,credit4,mark5,credit5,mark6,
-            credit6,mark7,credit7,mark8,credit8,mark9,credit9,mark10,credit10;
-    RelativeLayout r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
+            credit6,mark7,credit7,mark8,credit8,mark9,credit9,mark10,credit10,mark11,credit11,mark12,credit12
+            ,mark13,credit13,mark14,credit14,mark15,credit15;
+    RelativeLayout r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15;
     Button btn;
     public static final String PREFS_NAME = "MY_LANGUAGE";
     String lang;
@@ -90,6 +91,16 @@ public class Gpa extends AppCompatActivity {
         credit9 = (EditText) findViewById(R.id.crid9);
         mark10 = (EditText) findViewById(R.id.mark10);
         credit10 = (EditText) findViewById(R.id.crid10);
+        mark11 = (EditText) findViewById(R.id.mark11);
+        credit11 = (EditText) findViewById(R.id.crid11);
+        mark12 = (EditText) findViewById(R.id.mark12);
+        credit12 = (EditText) findViewById(R.id.crid12);
+        mark13 = (EditText) findViewById(R.id.mark13);
+        credit13 = (EditText) findViewById(R.id.crid13);
+        mark14 = (EditText) findViewById(R.id.mark14);
+        credit14 = (EditText) findViewById(R.id.crid14);
+        mark15 = (EditText) findViewById(R.id.mark15);
+        credit15 = (EditText) findViewById(R.id.crid15);
 
         mark1.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
         //mark1.addTextChangedListener(new DecimalFilter(mark1, activity));
@@ -121,6 +132,21 @@ public class Gpa extends AppCompatActivity {
         mark10.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
         //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
         credit10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark11.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit11.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark12.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit12.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark13.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit13.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark14.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit14.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
+        mark15.setFilters(new InputFilter[] {new DecimalDigitsInputFilter()});
+        //mark10.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "100")});
+        credit15.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
 
         r1 = (RelativeLayout)findViewById(R.id.rl1);
         r2 = (RelativeLayout)findViewById(R.id.rl2);
@@ -132,6 +158,11 @@ public class Gpa extends AppCompatActivity {
         r8 = (RelativeLayout)findViewById(R.id.rl8);
         r9 = (RelativeLayout)findViewById(R.id.rl9);
         r10 = (RelativeLayout)findViewById(R.id.rl10);
+        r11 = (RelativeLayout)findViewById(R.id.rl11);
+        r12 = (RelativeLayout)findViewById(R.id.rl12);
+        r13 = (RelativeLayout)findViewById(R.id.rl13);
+        r14 = (RelativeLayout)findViewById(R.id.rl14);
+        r15 = (RelativeLayout)findViewById(R.id.rl15);
 
         switch (course) {
             case 1:
@@ -144,6 +175,11 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
 
             case 2:
@@ -155,6 +191,11 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 3:
 
@@ -165,6 +206,11 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 4:
 
@@ -175,6 +221,11 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 5:
 
@@ -184,6 +235,11 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 6:
 
@@ -192,23 +248,68 @@ public class Gpa extends AppCompatActivity {
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 7:
 
                 r8.setVisibility(View.GONE);
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 8:
 
                 r9.setVisibility(View.GONE);
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 9:
 
                 r10.setVisibility(View.GONE);
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
                 break;
             case 10:
+                r11.setVisibility(View.GONE);
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
+                break;
+            case 11:
+                r12.setVisibility(View.GONE);
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
+                break;
+            case 12:
+                r13.setVisibility(View.GONE);
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
+                break;
+            case 13:
+                r14.setVisibility(View.GONE);
+                r15.setVisibility(View.GONE);
+                break;
+            case 14:
+                r15.setVisibility(View.GONE);
+                break;
+            case 15:
                 break;
 
             default:
@@ -225,9 +326,9 @@ public class Gpa extends AppCompatActivity {
 
 
 
-                double c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
-                double m1,m2,m3,m4,m5,m6,m7,m8,m9,m10;
-                double t1,t2,t3,t4,t5,t6,t7,t8,t9,t10;
+                double c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15;
+                double m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15;
+                double t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15;
                 double result,credits_marks,credits;
                 switch (course){
 
@@ -531,6 +632,287 @@ public class Gpa extends AppCompatActivity {
                             t10 = c10 * m10;
                             credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10;
                             credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10;
+                            result = credits_marks / credits;
+                            ShowGPAAlert(result, credits);
+                        } else{
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.some_thing_missing),Toast.LENGTH_LONG).show();
+                        }
+                        break;
+                    case 11:
+                        if(!isEmpty(mark1) && !isEmpty(credit1) && !isEmpty(mark2) && !isEmpty(credit2)
+                                && !isEmpty(mark3) && !isEmpty(credit3)&& !isEmpty(mark4) && !isEmpty(credit4)
+                                && !isEmpty(mark5) && !isEmpty(credit5)  && !isEmpty(mark6) && !isEmpty(credit6)
+                                && !isEmpty(mark7) && !isEmpty(credit7) && !isEmpty(mark8) && !isEmpty(credit8)
+                                && !isEmpty(mark9) && !isEmpty(credit9) && !isEmpty(mark10) && !isEmpty(credit10)
+                                && !isEmpty(mark11) && !isEmpty(credit11)) {
+                            m1 = getUsGPA(Double.parseDouble(mark1.getText().toString()));
+                            m2 = getUsGPA(Double.parseDouble(mark2.getText().toString()));
+                            m3 = getUsGPA(Double.parseDouble(mark3.getText().toString()));
+                            m4 = getUsGPA(Double.parseDouble(mark4.getText().toString()));
+                            m5 = getUsGPA(Double.parseDouble(mark5.getText().toString()));
+                            m6 = getUsGPA(Double.parseDouble(mark6.getText().toString()));
+                            m7 = getUsGPA(Double.parseDouble(mark7.getText().toString()));
+                            m8 = getUsGPA(Double.parseDouble(mark8.getText().toString()));
+                            m9 = getUsGPA(Double.parseDouble(mark9.getText().toString()));
+                            m10 = getUsGPA(Double.parseDouble(mark10.getText().toString()));
+                            m11 = getUsGPA(Double.parseDouble(mark11.getText().toString()));
+
+                            c1 = Double.parseDouble(credit1.getText().toString());
+                            c2 = Double.parseDouble(credit2.getText().toString());
+                            c3 = Double.parseDouble(credit3.getText().toString());
+                            c4 = Double.parseDouble(credit4.getText().toString());
+                            c5 = Double.parseDouble(credit5.getText().toString());
+                            c6 = Double.parseDouble(credit6.getText().toString());
+                            c7 = Double.parseDouble(credit7.getText().toString());
+                            c8 = Double.parseDouble(credit8.getText().toString());
+                            c9 = Double.parseDouble(credit9.getText().toString());
+                            c10 = Double.parseDouble(credit10.getText().toString());
+                            c11 = Double.parseDouble(credit11.getText().toString());
+                            t1 = c1 * m1;
+                            t2 = c2 * m2;
+                            t3 = c3 * m3;
+                            t4 = c4 * m4;
+                            t5 = c5 * m5;
+                            t6 = c6 * m6;
+                            t7 = c7 * m7;
+                            t8 = c8 * m8;
+                            t9 = c9 * m9;
+                            t10 = c10 * m10;
+                            t11 = c11 * m11;
+                            credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10+c11;
+                            credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10+t11;
+                            result = credits_marks / credits;
+                            ShowGPAAlert(result, credits);
+                        } else{
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.some_thing_missing),Toast.LENGTH_LONG).show();
+                        }
+                        break;
+                    case 12:
+                        if(!isEmpty(mark1) && !isEmpty(credit1) && !isEmpty(mark2) && !isEmpty(credit2)
+                                && !isEmpty(mark3) && !isEmpty(credit3)&& !isEmpty(mark4) && !isEmpty(credit4)
+                                && !isEmpty(mark5) && !isEmpty(credit5)  && !isEmpty(mark6) && !isEmpty(credit6)
+                                && !isEmpty(mark7) && !isEmpty(credit7) && !isEmpty(mark8) && !isEmpty(credit8)
+                                && !isEmpty(mark9) && !isEmpty(credit9) && !isEmpty(mark10) && !isEmpty(credit10)
+                                && !isEmpty(mark11) && !isEmpty(credit11) && !isEmpty(mark12) && !isEmpty(credit12)) {
+                            m1 = getUsGPA(Double.parseDouble(mark1.getText().toString()));
+                            m2 = getUsGPA(Double.parseDouble(mark2.getText().toString()));
+                            m3 = getUsGPA(Double.parseDouble(mark3.getText().toString()));
+                            m4 = getUsGPA(Double.parseDouble(mark4.getText().toString()));
+                            m5 = getUsGPA(Double.parseDouble(mark5.getText().toString()));
+                            m6 = getUsGPA(Double.parseDouble(mark6.getText().toString()));
+                            m7 = getUsGPA(Double.parseDouble(mark7.getText().toString()));
+                            m8 = getUsGPA(Double.parseDouble(mark8.getText().toString()));
+                            m9 = getUsGPA(Double.parseDouble(mark9.getText().toString()));
+                            m10 = getUsGPA(Double.parseDouble(mark10.getText().toString()));
+                            m11 = getUsGPA(Double.parseDouble(mark11.getText().toString()));
+                            m12 = getUsGPA(Double.parseDouble(mark12.getText().toString()));
+
+                            c1 = Double.parseDouble(credit1.getText().toString());
+                            c2 = Double.parseDouble(credit2.getText().toString());
+                            c3 = Double.parseDouble(credit3.getText().toString());
+                            c4 = Double.parseDouble(credit4.getText().toString());
+                            c5 = Double.parseDouble(credit5.getText().toString());
+                            c6 = Double.parseDouble(credit6.getText().toString());
+                            c7 = Double.parseDouble(credit7.getText().toString());
+                            c8 = Double.parseDouble(credit8.getText().toString());
+                            c9 = Double.parseDouble(credit9.getText().toString());
+                            c10 = Double.parseDouble(credit10.getText().toString());
+                            c11 = Double.parseDouble(credit11.getText().toString());
+                            c12 = Double.parseDouble(credit12.getText().toString());
+                            t1 = c1 * m1;
+                            t2 = c2 * m2;
+                            t3 = c3 * m3;
+                            t4 = c4 * m4;
+                            t5 = c5 * m5;
+                            t6 = c6 * m6;
+                            t7 = c7 * m7;
+                            t8 = c8 * m8;
+                            t9 = c9 * m9;
+                            t10 = c10 * m10;
+                            t11 = c11 * m11;
+                            t12 = c12 * m12;
+                            credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10+c11+c12;
+                            credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10+t11+t12;
+                            result = credits_marks / credits;
+                            ShowGPAAlert(result, credits);
+                        } else{
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.some_thing_missing),Toast.LENGTH_LONG).show();
+                        }
+                        break;
+                    case 13:
+                        if(!isEmpty(mark1) && !isEmpty(credit1) && !isEmpty(mark2) && !isEmpty(credit2)
+                                && !isEmpty(mark3) && !isEmpty(credit3)&& !isEmpty(mark4) && !isEmpty(credit4)
+                                && !isEmpty(mark5) && !isEmpty(credit5)  && !isEmpty(mark6) && !isEmpty(credit6)
+                                && !isEmpty(mark7) && !isEmpty(credit7) && !isEmpty(mark8) && !isEmpty(credit8)
+                                && !isEmpty(mark9) && !isEmpty(credit9) && !isEmpty(mark10) && !isEmpty(credit10)
+                                && !isEmpty(mark11) && !isEmpty(credit11) && !isEmpty(mark12) && !isEmpty(credit12)
+                                && !isEmpty(mark13) && !isEmpty(credit13)) {
+                            m1 = getUsGPA(Double.parseDouble(mark1.getText().toString()));
+                            m2 = getUsGPA(Double.parseDouble(mark2.getText().toString()));
+                            m3 = getUsGPA(Double.parseDouble(mark3.getText().toString()));
+                            m4 = getUsGPA(Double.parseDouble(mark4.getText().toString()));
+                            m5 = getUsGPA(Double.parseDouble(mark5.getText().toString()));
+                            m6 = getUsGPA(Double.parseDouble(mark6.getText().toString()));
+                            m7 = getUsGPA(Double.parseDouble(mark7.getText().toString()));
+                            m8 = getUsGPA(Double.parseDouble(mark8.getText().toString()));
+                            m9 = getUsGPA(Double.parseDouble(mark9.getText().toString()));
+                            m10 = getUsGPA(Double.parseDouble(mark10.getText().toString()));
+                            m11 = getUsGPA(Double.parseDouble(mark11.getText().toString()));
+                            m12 = getUsGPA(Double.parseDouble(mark12.getText().toString()));
+                            m13 = getUsGPA(Double.parseDouble(mark13.getText().toString()));
+
+                            c1 = Double.parseDouble(credit1.getText().toString());
+                            c2 = Double.parseDouble(credit2.getText().toString());
+                            c3 = Double.parseDouble(credit3.getText().toString());
+                            c4 = Double.parseDouble(credit4.getText().toString());
+                            c5 = Double.parseDouble(credit5.getText().toString());
+                            c6 = Double.parseDouble(credit6.getText().toString());
+                            c7 = Double.parseDouble(credit7.getText().toString());
+                            c8 = Double.parseDouble(credit8.getText().toString());
+                            c9 = Double.parseDouble(credit9.getText().toString());
+                            c10 = Double.parseDouble(credit10.getText().toString());
+                            c11 = Double.parseDouble(credit11.getText().toString());
+                            c12 = Double.parseDouble(credit12.getText().toString());
+                            c13 = Double.parseDouble(credit13.getText().toString());
+                            t1 = c1 * m1;
+                            t2 = c2 * m2;
+                            t3 = c3 * m3;
+                            t4 = c4 * m4;
+                            t5 = c5 * m5;
+                            t6 = c6 * m6;
+                            t7 = c7 * m7;
+                            t8 = c8 * m8;
+                            t9 = c9 * m9;
+                            t10 = c10 * m10;
+                            t11 = c11 * m11;
+                            t12 = c12 * m12;
+                            t13 = c13 * m13;
+                            credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10+c11+c12+c13;
+                            credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10+t11+t12+t13;
+                            result = credits_marks / credits;
+                            ShowGPAAlert(result, credits);
+                        } else{
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.some_thing_missing),Toast.LENGTH_LONG).show();
+                        }
+                        break;
+
+                    case 14:
+                        if(!isEmpty(mark1) && !isEmpty(credit1) && !isEmpty(mark2) && !isEmpty(credit2)
+                                && !isEmpty(mark3) && !isEmpty(credit3)&& !isEmpty(mark4) && !isEmpty(credit4)
+                                && !isEmpty(mark5) && !isEmpty(credit5)  && !isEmpty(mark6) && !isEmpty(credit6)
+                                && !isEmpty(mark7) && !isEmpty(credit7) && !isEmpty(mark8) && !isEmpty(credit8)
+                                && !isEmpty(mark9) && !isEmpty(credit9) && !isEmpty(mark10) && !isEmpty(credit10)
+                                && !isEmpty(mark11) && !isEmpty(credit11) && !isEmpty(mark12) && !isEmpty(credit12)
+                                && !isEmpty(mark13) && !isEmpty(credit13) && !isEmpty(mark14) && !isEmpty(credit14)) {
+                            m1 = getUsGPA(Double.parseDouble(mark1.getText().toString()));
+                            m2 = getUsGPA(Double.parseDouble(mark2.getText().toString()));
+                            m3 = getUsGPA(Double.parseDouble(mark3.getText().toString()));
+                            m4 = getUsGPA(Double.parseDouble(mark4.getText().toString()));
+                            m5 = getUsGPA(Double.parseDouble(mark5.getText().toString()));
+                            m6 = getUsGPA(Double.parseDouble(mark6.getText().toString()));
+                            m7 = getUsGPA(Double.parseDouble(mark7.getText().toString()));
+                            m8 = getUsGPA(Double.parseDouble(mark8.getText().toString()));
+                            m9 = getUsGPA(Double.parseDouble(mark9.getText().toString()));
+                            m10 = getUsGPA(Double.parseDouble(mark10.getText().toString()));
+                            m11 = getUsGPA(Double.parseDouble(mark11.getText().toString()));
+                            m12 = getUsGPA(Double.parseDouble(mark12.getText().toString()));
+                            m13 = getUsGPA(Double.parseDouble(mark13.getText().toString()));
+                            m14 = getUsGPA(Double.parseDouble(mark14.getText().toString()));
+
+                            c1 = Double.parseDouble(credit1.getText().toString());
+                            c2 = Double.parseDouble(credit2.getText().toString());
+                            c3 = Double.parseDouble(credit3.getText().toString());
+                            c4 = Double.parseDouble(credit4.getText().toString());
+                            c5 = Double.parseDouble(credit5.getText().toString());
+                            c6 = Double.parseDouble(credit6.getText().toString());
+                            c7 = Double.parseDouble(credit7.getText().toString());
+                            c8 = Double.parseDouble(credit8.getText().toString());
+                            c9 = Double.parseDouble(credit9.getText().toString());
+                            c10 = Double.parseDouble(credit10.getText().toString());
+                            c11 = Double.parseDouble(credit11.getText().toString());
+                            c12 = Double.parseDouble(credit12.getText().toString());
+                            c13 = Double.parseDouble(credit13.getText().toString());
+                            c14 = Double.parseDouble(credit14.getText().toString());
+                            t1 = c1 * m1;
+                            t2 = c2 * m2;
+                            t3 = c3 * m3;
+                            t4 = c4 * m4;
+                            t5 = c5 * m5;
+                            t6 = c6 * m6;
+                            t7 = c7 * m7;
+                            t8 = c8 * m8;
+                            t9 = c9 * m9;
+                            t10 = c10 * m10;
+                            t11 = c11 * m11;
+                            t12 = c12 * m12;
+                            t13 = c13 * m13;
+                            t14 = c14 * m14;
+                            credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10+c11+c12+c13+c14;
+                            credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10+t11+t12+t13+t14;
+                            result = credits_marks / credits;
+                            ShowGPAAlert(result, credits);
+                        } else{
+                            Toast.makeText(getApplicationContext(),getResources().getString(R.string.some_thing_missing),Toast.LENGTH_LONG).show();
+                        }
+                        break;
+
+                    case 15:
+                        if(!isEmpty(mark1) && !isEmpty(credit1) && !isEmpty(mark2) && !isEmpty(credit2)
+                                && !isEmpty(mark3) && !isEmpty(credit3)&& !isEmpty(mark4) && !isEmpty(credit4)
+                                && !isEmpty(mark5) && !isEmpty(credit5)  && !isEmpty(mark6) && !isEmpty(credit6)
+                                && !isEmpty(mark7) && !isEmpty(credit7) && !isEmpty(mark8) && !isEmpty(credit8)
+                                && !isEmpty(mark9) && !isEmpty(credit9) && !isEmpty(mark10) && !isEmpty(credit10)
+                                && !isEmpty(mark11) && !isEmpty(credit11) && !isEmpty(mark12) && !isEmpty(credit12)
+                                && !isEmpty(mark13) && !isEmpty(credit13) && !isEmpty(mark14) && !isEmpty(credit14)
+                                && !isEmpty(mark15) && !isEmpty(credit15)) {
+                            m1 = getUsGPA(Double.parseDouble(mark1.getText().toString()));
+                            m2 = getUsGPA(Double.parseDouble(mark2.getText().toString()));
+                            m3 = getUsGPA(Double.parseDouble(mark3.getText().toString()));
+                            m4 = getUsGPA(Double.parseDouble(mark4.getText().toString()));
+                            m5 = getUsGPA(Double.parseDouble(mark5.getText().toString()));
+                            m6 = getUsGPA(Double.parseDouble(mark6.getText().toString()));
+                            m7 = getUsGPA(Double.parseDouble(mark7.getText().toString()));
+                            m8 = getUsGPA(Double.parseDouble(mark8.getText().toString()));
+                            m9 = getUsGPA(Double.parseDouble(mark9.getText().toString()));
+                            m10 = getUsGPA(Double.parseDouble(mark10.getText().toString()));
+                            m11 = getUsGPA(Double.parseDouble(mark11.getText().toString()));
+                            m12 = getUsGPA(Double.parseDouble(mark12.getText().toString()));
+                            m13 = getUsGPA(Double.parseDouble(mark13.getText().toString()));
+                            m14 = getUsGPA(Double.parseDouble(mark14.getText().toString()));
+                            m15 = getUsGPA(Double.parseDouble(mark15.getText().toString()));
+
+                            c1 = Double.parseDouble(credit1.getText().toString());
+                            c2 = Double.parseDouble(credit2.getText().toString());
+                            c3 = Double.parseDouble(credit3.getText().toString());
+                            c4 = Double.parseDouble(credit4.getText().toString());
+                            c5 = Double.parseDouble(credit5.getText().toString());
+                            c6 = Double.parseDouble(credit6.getText().toString());
+                            c7 = Double.parseDouble(credit7.getText().toString());
+                            c8 = Double.parseDouble(credit8.getText().toString());
+                            c9 = Double.parseDouble(credit9.getText().toString());
+                            c10 = Double.parseDouble(credit10.getText().toString());
+                            c11 = Double.parseDouble(credit11.getText().toString());
+                            c12 = Double.parseDouble(credit12.getText().toString());
+                            c13 = Double.parseDouble(credit13.getText().toString());
+                            c14 = Double.parseDouble(credit14.getText().toString());
+                            c15 = Double.parseDouble(credit15.getText().toString());
+                            t1 = c1 * m1;
+                            t2 = c2 * m2;
+                            t3 = c3 * m3;
+                            t4 = c4 * m4;
+                            t5 = c5 * m5;
+                            t6 = c6 * m6;
+                            t7 = c7 * m7;
+                            t8 = c8 * m8;
+                            t9 = c9 * m9;
+                            t10 = c10 * m10;
+                            t11 = c11 * m11;
+                            t12 = c12 * m12;
+                            t13 = c13 * m13;
+                            t14 = c14 * m14;
+                            t15 = c15 * m15;
+                            credits = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10+c11+c12+c13+c14+c15;
+                            credits_marks = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10+t11+t12+t13+t14+t15;
                             result = credits_marks / credits;
                             ShowGPAAlert(result, credits);
                         } else{

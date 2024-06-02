@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
                 b.setTitle(R.string.choose_num_of_course);
-                String[] types = {"1", "2","3","4","5","6","7","8","9","10"};
+                String[] types = {"1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15"};
                 b.setItems(types, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
