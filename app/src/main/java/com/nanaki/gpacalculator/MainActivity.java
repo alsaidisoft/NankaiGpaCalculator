@@ -218,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setImageColor(ImageView myImg){
-        myImg.setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.image_tint), android.graphics.PorterDuff.Mode.SRC_IN);
+        myImg.setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.image_tint),
+                android.graphics.PorterDuff.Mode.SRC_IN);
     }
 }
