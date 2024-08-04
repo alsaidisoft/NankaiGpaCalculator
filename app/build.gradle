@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.nanaki.gpacalculator"
-        minSdk 30
-        targetSdk 33
-        versionCode 11
-        versionName "1.5"
+        minSdk 24
+        targetSdk 34
+        versionCode 12
+        versionName "1.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
