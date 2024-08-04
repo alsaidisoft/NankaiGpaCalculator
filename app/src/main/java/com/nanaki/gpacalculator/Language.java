@@ -39,13 +39,13 @@ public class Language extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+        /*lang = l.getString("lang", "no");
         layout = (RelativeLayout) findViewById(R.id.relative_language);
         if(lang.equals("العربية")) {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             layout.setGravity(Gravity.LEFT);
 
-        }
+        }*/
         //initializing variables
         radioGroup = (RadioGroup) findViewById(R.id.btngrp);
 

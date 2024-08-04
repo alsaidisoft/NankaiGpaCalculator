@@ -43,10 +43,10 @@ public class CalculateStyle extends AppCompatActivity {
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         lang = l.getString("lang", "no");
         layout = (RelativeLayout) findViewById(R.id.relative_calculate_style);
-        if(lang.equals("العربية")) {
+        /*if(lang.equals("العربية")) {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             layout.setGravity(Gravity.LEFT);
-        }
+        }*/
         //initializing variables
         radioGroup = (RadioGroup) findViewById(R.id.btngrp);
 

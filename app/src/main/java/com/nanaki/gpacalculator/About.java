@@ -26,10 +26,10 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         setTitle(R.string.about);
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+        /*lang = l.getString("lang", "no");
         if(lang.equals("العربية")) {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-        }
+        }*/
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         version = (TextView) findViewById(R.id.version);

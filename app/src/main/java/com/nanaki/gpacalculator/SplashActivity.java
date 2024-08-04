@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+        /*lang = l.getString("lang", "no");
         switch (lang) {
             case "English":
                 setLocale("en");
@@ -45,7 +45,7 @@ public class SplashActivity extends AppCompatActivity {
             default:
                 setLocale("en");
                 break;
-        }
+        }*/
         SharedPreferences prefs = getSharedPreferences(Theme, MODE_PRIVATE);
         String check = prefs.getString("Theme", "no");
 

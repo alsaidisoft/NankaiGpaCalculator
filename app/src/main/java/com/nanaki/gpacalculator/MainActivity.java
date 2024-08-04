@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         mode = uiModeManager.getNightMode();
 
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+       /* lang = l.getString("lang", "no");
         if(lang.equals("العربية"))
-            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);*/
 
         gpa =(TextView)findViewById(R.id.calculate);
         developers = (TextView)findViewById(R.id.developers);

@@ -26,9 +26,9 @@ public class PrivacyPolicy extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+        /*lang = l.getString("lang", "no");
         if(lang.equals("العربية"))
-            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);*/
         content = (TextView) findViewById(R.id.aboutTxt);
         SharedPreferences prefs = getSharedPreferences(fontSize, MODE_PRIVATE);
         String font = prefs.getString("fontSize", "no");

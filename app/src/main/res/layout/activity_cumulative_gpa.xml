@@ -1,36 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/relative_layout_dialog"
         android:padding="5dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/lin1"
-        android:gravity="right"
-        android:padding="0dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/exit"
-            android:src="@android:drawable/ic_delete"/>
-    </RelativeLayout>
 
 
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/liny1">
 
         <ImageView
             android:id="@+id/icon_gpa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:src="@mipmap/ic_action_calculate">
+            android:layout_weight="0.5"
+            android:src="@mipmap/ic_action_calculate" />
 
-        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/calculate_cumulative_gpa"
+            android:textColor="@color/purple_200"
+            android:textSize="18sp"
+            android:id="@+id/calc_gpa" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/exit"
+            android:src="@android:drawable/ic_delete" />
+    </LinearLayout>
+
+<!--<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/liny1">
+        <ImageView
+            android:id="@+id/icon_gpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@mipmap/ic_action_calculate"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,16 +58,21 @@
         android:text="@string/calculate_cumulative_gpa"
         android:textColor="@color/purple_200"
         android:textSize="18sp"
-
-        android:layout_toRightOf="@+id/icon_gpa"
         android:id="@+id/calc_gpa"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exit"
+        android:src="@android:drawable/ic_delete"/>
+</LinearLayout>-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enterTotal_Hourse_Before_This_semester"
         android:inputType="number"
         android:layout_margin="5dp"
-        android:layout_below="@+id/calc_gpa"
+        android:layout_below="@+id/liny1"
         android:id="@+id/total_horse"/>
     <EditText
         android:layout_width="match_parent"

@@ -56,9 +56,9 @@ public class Gpa extends AppCompatActivity {
         uiModeManager = (UiModeManager) getApplicationContext().getSystemService(Context.UI_MODE_SERVICE);
         mode = uiModeManager.getNightMode();
         SharedPreferences l = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        lang = l.getString("lang", "no");
+        /*lang = l.getString("lang", "no");
         if(lang.equals("العربية"))
-            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);*/
 
         SharedPreferences prefs1 = getSharedPreferences(Theme, MODE_PRIVATE);
         check = prefs1.getString("Theme", "no");
@@ -931,7 +931,10 @@ public class Gpa extends AppCompatActivity {
 
 
     public void ShowGPAAlert(double result, double credits){
-        DecimalFormat df = new DecimalFormat("0.00");
+        final DecimalFormatSymbols decimalSymbol = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat d = new DecimalFormat();
+        d.setDecimalFormatSymbols(decimalSymbol);
+        d.setMaximumFractionDigits(2);
         AlertDialog.Builder builder = new AlertDialog.Builder(Gpa.this);
         int mImage = R.mipmap.ic_action_calculate;
         if(mode == UiModeManager.MODE_NIGHT_YES) {
@@ -939,7 +942,7 @@ public class Gpa extends AppCompatActivity {
         }
         builder.setIcon(mImage);
         builder.setTitle(R.string.result);
-        builder.setMessage(getResources().getString(R.string.your_semester_gpa) +":\n"+df.format(result));
+        builder.setMessage(getResources().getString(R.string.your_semester_gpa) +":\n"+d.format(result));
         builder.setCancelable(false);
 
 
@@ -984,7 +987,7 @@ public class Gpa extends AppCompatActivity {
                                 double total = (result * credits) + (cg * h);
                                 total = total / (credits + h);
                                 System.out.println(total);
-                                txt.setText(getResources().getString(R.string.your_cumulative_gpa) + "=" + df.format(total));
+                                txt.setText(getResources().getString(R.string.your_cumulative_gpa) + "=" + d.format(total));
                             //}else {
                            //     Toast.makeText(getApplicationContext(), getResources().getString(R.string.gpa_bigger_than_foure), Toast.LENGTH_LONG).show();
                             //}

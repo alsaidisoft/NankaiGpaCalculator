@@ -14,19 +14,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl1"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
 
             <EditText
                 android:id="@+id/mark1"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="2dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
                 android:textAlignment="center" />
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -40,11 +40,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/rl2"
             android:layout_below="@+id/rl1"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -52,7 +52,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark2"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -66,12 +66,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl3"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl2"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -79,7 +79,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark3"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -92,12 +92,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl4"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl3"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -105,7 +105,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark4"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -118,12 +118,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl5"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl4"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -131,7 +131,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark5"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -144,12 +144,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl6"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl5"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -157,7 +157,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark6"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -171,12 +171,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl7"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl6"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -184,7 +184,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark7"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -197,12 +197,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl8"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl7"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -210,7 +210,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark8"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -223,12 +223,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl9"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl8"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -236,7 +236,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark9"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -249,12 +249,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl10"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl9"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -262,7 +262,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark10"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -276,12 +276,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl11"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl10"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -289,7 +289,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark11"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -302,12 +302,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl12"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl11"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -315,7 +315,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark12"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -328,12 +328,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl13"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl12"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -341,7 +341,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark13"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -354,12 +354,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl14"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl13"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -367,7 +367,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark14"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -380,12 +380,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rl15"
-            android:gravity="right"
+            android:gravity="center"
             android:layout_below="@+id/rl14"
             android:layout_centerHorizontal="true">
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_mark"
                 android:inputType="number|numberDecimal"
@@ -393,7 +393,7 @@
                 android:textAlignment="center"
                 android:id="@+id/mark15"/>
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:hint="@string/enter_credit"
                 android:inputType="number"
@@ -409,7 +409,7 @@
             android:layout_below="@+id/rl15"
             android:gravity="center_horizontal">
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:layout_margin="7dp"
                 android:text="@string/calculate"

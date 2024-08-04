@@ -38,10 +38,10 @@ public class FontSize extends AppCompatActivity {
         SharedPreferences l = getSharedPreferences(PREFS_NAME2, MODE_PRIVATE);
         lang = l.getString("lang", "no");
         layout = (RelativeLayout) findViewById(R.id.relative_font_size);
-        if(lang.equals("العربية")) {
+        /*if(lang.equals("العربية")) {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             layout.setGravity(Gravity.LEFT);
-        }
+        }*/
         ActionBar actionBar = getActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
