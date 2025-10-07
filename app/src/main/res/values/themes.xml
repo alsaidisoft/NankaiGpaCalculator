@@ -14,7 +14,17 @@
         <item name="android:statusBarColor">#661555</item>
         <item name="colorSurface">@color/purple_500</item>
         <item name="colorOnSurface">@color/white</item>
+        <!-- Background -->
+        <item name="android:windowBackground">@color/white</item>
         <!-- Customize your theme here. -->
+        <!-- Status bar -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <!-- Critical lines -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
     </style>
 
 

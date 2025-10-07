@@ -4,14 +4,14 @@ plugins {
 
 android {
     namespace 'com.nanaki.gpacalculator'
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.nanaki.gpacalculator"
         minSdk 24
-        targetSdk 34
-        versionCode 12
-        versionName "1.6"
+        targetSdk 35
+        versionCode 13
+        versionName "1.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
